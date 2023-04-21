@@ -1,0 +1,999 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+.loader{
+  position: fixed;
+  transition: all 1s;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  color:  #111;
+  display: flex;
+}
+.loader div{
+  margin: auto;
+}
+.loading{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  animation-name: loading;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+nav{
+  z-index: 5;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  transition: all .5s;
+}
+nav ion-icon{
+  color: #3E3E3E;
+}
+nav a{
+  color: #3E3E3E;
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 5px;
+  white-space: nowrap;
+}
+.contenerNav{
+  margin: auto;
+  display: flex;
+  width: 90%;
+  height: 100%;
+}
+.logo, .logocontener{
+  height: 35px;
+  margin: auto 0;
+}
+.contenerLinksNav{
+  display: flex;
+  margin: auto 0;
+  margin-left: auto;
+  transition: all .5s;
+}
+.contenerLinksNav div a{
+  padding-top: 2px;
+}
+.contenerLinksNav div{
+  transition: all .25s;
+  margin: auto;
+  display: flex;
+  margin-left: 5vh;
+}
+.contenerLinksNav div:hover:not(.here){
+  transform: scale(1.075);
+}
+.contenerLinksNav div *{
+  margin: auto;
+}
+.contenerLinksNav div ion-icon{
+  font-size: 20px;
+}
+.here *{
+  color: #009CEB;
+  background: linear-gradient(180deg, #3B008C 0%, #009CEB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cmdClass{
+  padding: 10px 55px;
+  color: #fff;
+  font-weight: 400;
+  background: linear-gradient(180deg, #3B008C 0%, #009CEB 100%);
+  margin-left: 50px;
+  border-radius: 100px;
+  transition: all .5s;
+}
+
+.cmdClass:hover{
+  transform: scale(1.1) perspective(300px) rotateX(10deg) rotateY(2.5deg);
+  box-shadow:  0px 0px 16px rgb(63, 63, 63);
+}
+
+.openMenu{
+  margin: auto 0;
+  margin-left: auto;
+  display: none;
+}
+.openMenu ion-icon{
+  margin: auto;
+  font-size: 35px;
+  --ionicon-stroke-width: 35px;
+}
+.openMenu ion-icon[name= "close-sharp"]{
+  display: none;
+}
+.home{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.centerDivHome{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.secondDiv{
+  margin: auto;
+}
+.firstDiv{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.anim-1 {
+  --anim-order: 5;
+  --anim-time: 10;
+  z-index: 2;
+  margin-top: 25px;
+  margin-bottom: -100px;
+  margin-left: 45px;
+}
+
+.anim-2 {
+  --anim-time: 10;
+  --anim-order: 10;
+  z-index: 1;
+  margin-top: 15px;
+  margin-bottom: -100px;
+  margin-left: -75px;
+}
+
+.anim-3 {
+  --anim-time: 10;
+  --anim-order: 3;
+}
+.firstDiv img{
+  width: 375px;
+  height: 200px;
+  transition: all .5s;
+  cursor: pointer;
+  animation: anim1 calc(var(--anim-time) * 1s) infinite;
+  transform: translateY(-15px);
+  animation-delay: calc(var(--anim-order) * .5s);
+}
+@keyframes anim1 {
+  0%{
+    transform: translateY(-15px);
+  }
+  50%{
+    transform: translateY(15px);
+  }
+  100%{
+    transform: translateY(-15px);
+  }
+}
+.home h1{
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.home h1 span{
+  font-family: 'Ribeye Marrow', cursive;
+  font-style: normal;
+  font-size: 55px;
+  background: linear-gradient(90.39deg, #3C008B 0.31%, #00A3F0 98.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.home p{
+  font-size: 26px;
+  color: #525252;
+  line-height: 45px;
+  font-weight: 300;
+  padding-bottom: 25px;
+}
+
+.home a{
+  padding: 10px 55px;
+  font-size: 24px;
+  background: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 100px;
+  position: relative;
+  transition: all .5s;
+}
+.home a span{
+  background: linear-gradient(180deg, #3C008B 0%, #00A1EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.home a::before{
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #3B008C 0%, #009CEB 100%) !important;
+  z-index: -1;
+}
+.home a:hover{
+  background: linear-gradient(90deg, #3B008C 0%, #009CEB 100%);
+}
+.home a:hover span{
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+.ltT{
+  font-weight: 275;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: capitalize;
+}
+
+/*--------------------------------------------------------------------
+  SERVICES
+---------------------------------------------------------------------*/
+.services{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.centerDivServices{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-height: 75vh;
+  width: 75%;
+}
+
+.titleServicesDiv{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.titleServicesDiv *{
+  margin: 0 auto;
+}
+.titleServicesDiv div{
+  display: flex;
+  width: 100%;
+}
+.titleServicesDiv div hr{
+  margin: auto;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, #3C008B, #009CEB);
+}
+.titleServicesDiv h1{
+  font-size: 35px;
+  padding: 0 5vh;
+  white-space: nowrap;
+}
+.titleServicesDiv p{
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: capitalize;
+}
+.cardsContener{
+  display: flex;
+  margin-top: 5vh;
+  max-height: 75vh;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.card{
+  margin: 4vh auto;
+  width: 400px;
+  height: 250px;
+  border-left: 4px solid rgba(18, 123, 251, 0.3);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 10px 10px 0px;
+}
+.card img{
+  position: inherit;
+  z-index: -1;
+  transform: translateX(-27px) translateY(30px);
+}
+.card h2{
+  height: 55px;
+  margin: 0 5vh;
+  margin-top: -20px;
+  display: flex;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+.card p{
+  margin: 0 5vh;
+  line-height: 138.5%;
+  font-size: 18px;
+}
+
+/*--------------------------------------------------------------------
+  CRÉATIONS
+---------------------------------------------------------------------*/
+
+.creations{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background: radial-gradient(117.82% 117.82% at 50% 50%, #FFFFFF 40%, #80b2ec 100%);
+}
+.contenerCreations{
+  margin: auto;
+  width: 75%;
+  display: flex;
+}
+
+.textContentCreations{
+  width: 650px;
+  height: 100%;
+  margin: auto;
+}
+.textContentCreations div{
+  display: flex;
+  width: 100%;
+}
+.textContentCreations div h1{
+  white-space: nowrap;
+  padding-right: 2.5vh;
+  font-size: 35px;
+}
+.textContentCreations div hr{
+  margin: auto;
+  width: 75%;
+  height: 3px;
+  background: linear-gradient(to right, #3C008B, #009CEB);
+}
+
+.textContentCreations p:nth-child(3){
+  margin-top: 5vh;
+}
+
+
+.flexcardStyleContener{
+  width: 550px;
+  height: 275px;
+  margin: auto;
+  display: flex;
+}
+.flexcardStyle{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.flexcardStyle article{
+  display: flex;
+}
+
+.flexcardStyle article *{
+  margin: auto;
+}
+/*--------------------------------------------------------------------
+  ABOUT US
+--------------------------------------------------------------------*/
+
+.aboutUs{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background: conic-gradient(from 180deg at 50% 50%, #FFFFFF 0deg, #d1ddea 200deg, #FFFFFF 360deg);
+}
+
+.contenerAboutUs{
+  margin: auto;
+  width: 80%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.AboutUsTitle{
+  display: flex;
+}
+.AboutUsTitle h1{
+  white-space: nowrap;
+  padding: 0 4vh;
+  font-size: 35px;
+}
+.AboutUsTitle hr{
+  margin: auto;
+  width: 75%;
+  height: 3px;
+  background: linear-gradient(to right, #3C008B, #009CEB);
+}
+.textAboutUs{
+  margin: 4vh auto;
+  max-width: 825px;
+}
+.scrollabledivAboutUs{
+  height: 245px;
+  width: 550px;
+  margin: 2.5vh auto;
+  text-align: left;
+  overflow-y: scroll;
+}
+.scrollabledivAboutUs li{
+  padding: 1.5vh;
+  display: flex;
+}
+.scrollabledivAboutUs li *{
+  margin: auto 1vh;
+}
+
+.scrollabledivAboutUs::-webkit-scrollbar{
+  width: 10px;
+  border-radius: 10vh;
+  background: #fff;
+}
+.scrollabledivAboutUs::-webkit-scrollbar-thumb{
+  width: 10px;
+  border-radius: 10vh;
+  background: linear-gradient(180deg, #3C008B 0%, #00A1EF 100%);
+}
+.borderlinkDiscord{
+  padding-top: 23px;
+  padding-bottom: 17px;
+  padding-left: 7px;
+  padding-right: 3px;
+  border-radius: 100px;
+  background: linear-gradient(180deg, #3C008B 0%, #00A1EF 100%);
+}
+.cmdLink{
+  background: linear-gradient(180deg, #3C008B 0%, #00A1EF 100%);
+  padding: 10px 55px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 100px;
+  white-space: nowrap;
+  margin: 0 5vh;
+  transition: all .25s;
+}
+.cmdLink:hover{
+  box-shadow: 0px 0px 15px #00000090;
+}
+.contenerlinks{
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+/*--------------------------------------------------------------------
+  FOOTER
+---------------------------------------------------------------------*/
+footer{
+  min-height: 40vh;
+}
+.flexcards{
+  padding: 5vh 5vh;
+}
+.flexcards article{
+  display: flex;
+}
+.footerCard{
+  margin: auto;
+  border: solid;
+  width: 25%;
+  height: 180px;
+  background: linear-gradient(98.68deg, rgba(58, 0, 140, 0.1) 0%, rgba(255, 255, 255, 0.25) 16.57%, rgba(255, 255, 255, 0.25) 78.02%, rgba(0, 161, 239, 0.1) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.divInfoAvis{
+  display: flex;
+  padding: 1vh;
+}
+.pp{
+  padding: 0 1vh;
+  margin: auto 0;
+}
+.starsDiv{
+  margin: auto 0;
+  margin-left: auto;
+  padding: 0 2.5vh;
+}
+.limitStar{
+  opacity: 0.5;
+}
+.pseudo p:nth-child(1){
+  font-weight: 400;
+  font-size: 18px;
+}
+.pseudo p:nth-child(2){
+  font-weight: 300;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 16px;
+}
+.avisText{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.03em;
+  padding: 0 2.5vh;
+}
+.footerDiv{
+  padding: 0 5vh;
+  min-height: 7.5vh;
+  display: flex;
+}
+.footerDiv *{
+  margin: auto 0;
+}
+.footerDiv img{
+  height: 35px;
+  width: 226.68px;
+}
+.footerDiv p{
+  margin: auto;
+}
+.footerDiv a{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.footerDiv a img{
+  margin: auto 1.5vh;
+  width: 40px;
+  height: 40px;
+}
+.footerDiv a p{
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 38px;
+  text-align: center;
+  background: linear-gradient(180deg, #3B008C 0%, #0591E4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+@media screen and (max-width: 1400px) {
+  .contenerNav{
+    width: 95%;
+  }
+  .secondcard{
+    display: none;
+  }
+  .footerCard{
+    width: 40%;
+  }
+  nav a{
+    font-size: 14px;
+    padding-left: 2.5px;
+  }
+  .contenerLinksNav div{
+    margin-left: 25px;
+  }
+
+  .contenerCreations{
+    width: 95%;
+  }
+  .textContentCreations{
+    width: 600px;
+    height: 100%;
+    margin: auto;
+  }
+  .textContentCreations div h1{
+    padding-right: 1vh;
+    font-size: 30px;
+  }
+  .textContentCreations p:nth-child(3){
+    margin-top: 5vh;
+  }
+  .flexcardStyleContener{
+    width: 550px;
+    height: 275px;
+    margin: auto;
+    display: flex;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .contenerNav{
+    width: 95%;
+  }
+  nav a{
+    font-size: 14px;
+    padding-left: 2.5px;
+  }
+  .cmdClass{
+    padding: 6px 40px;
+    font-weight: 400;
+    margin-left: 20px;
+  }
+  .logo{
+    height: 30px;
+    margin: auto 0;
+  }
+  .centerDivHome{
+    width: 97.5%;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .centerDivServices{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 85vh;
+    width: 90%;
+  }
+  .card{
+    margin: 5vh auto;
+    width: 300px;
+    height: 225px;
+  }
+  .card h2{
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .card p{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1040px) {
+  #avis{
+    display: none;
+  }
+  
+  .centerDivHome{
+    width: 90%;
+    flex-direction: column;
+  }
+  .firstDiv img{
+    width: 300px;
+    height: 175px;
+    transition: all .5s;
+  }
+  .home p{
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+  .home a, .linkDiscord {
+    padding: 10px 45px;
+    font-size: 18px;
+  }
+  .home h1{
+    font-size: 40px;
+    white-space: nowrap;
+  }
+  .home h1 span{
+    font-size: 45px;
+  }
+  .secondDiv{
+    margin-top: 2.5vh;
+  }
+  .contenerCreations{
+    width: 90%;
+  }
+  .textContentCreations{
+    width: 500px;
+    height: 100%;
+    margin: auto;
+  }
+  .textContentCreations div{
+    display: flex;
+    width: 100%;
+  }
+  .textContentCreations div h1{
+    white-space: nowrap;
+    padding-right: 2.5vh;
+    font-size: 35px;
+  }
+  .textContentCreations div hr{
+    margin: auto;
+    width: 75%;
+    height: 3px;
+    background: linear-gradient(to right, #3C008B, #009CEB);
+  }
+  .textContentCreations p:nth-child(3){
+    margin-top: 5vh;
+  }
+  .flexcardStyleContener{
+    width: 550px;
+    height: 275px;
+    margin: auto;
+    display: flex;
+  }
+  .contenerCreations{
+    width: 85%;
+    flex-direction: column-reverse;
+  }
+  .textContentCreations{
+    width: 500px;
+    margin-top: 5vh;
+  }
+  .textContentCreations div hr{
+    margin: auto;
+    width: 75%;
+    height: 3px;
+    background: linear-gradient(to right, #3C008B, #009CEB);
+  }
+  
+  .textContentCreations p:nth-child(3){
+    margin-top: 5vh;
+  }
+}
+@media screen and (max-width: 940px) {
+  .logo{
+    height: 35px;
+    margin: auto 0;
+  }
+  .loader div img{
+    width: 95vw;
+  }
+  .openMenu{
+    display: flex;
+  }
+  .contenerNav{
+    width: 100%;
+    margin-top: 2vh;
+    height: auto;
+    flex-direction: column;
+  }
+  .logocontener{
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+  nav a{
+    font-size: 14px;
+    padding-left: 15px;
+  }
+  .contenerLinksNav{
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    margin: auto;
+    overflow: hidden;
+    background: #fff;
+  }
+  .contenerLinksNav div, .contenerLinksNav *{
+    margin: 4vh auto;
+    font-size: 20px !important;
+  }
+  .footerCard{
+    width: 47.5%;
+  }
+  .footerDiv *{
+    margin: auto;
+    padding: 1vh 0;
+  }
+  .footerDiv{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  .scrollabledivAboutUs{
+    width: 350px;
+  }
+  .contenerAboutUs{
+    width: 95%;
+  }
+  .AboutUsTitle h1{
+    white-space: nowrap;
+    padding: 0 0.5vh;
+    font-size: 35px;
+  }
+  .scrollabledivAboutUs li{
+    padding: .5vh;
+  }
+  .scrollabledivAboutUs li *{
+    margin: auto 1vh;
+  }
+  
+  .contenerlinks{
+    margin-top: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .textAboutUs{
+    margin: 1vh 0;
+    font-size: 14px;
+  }
+  .contenerlinks *{
+    margin: 2vh 0;
+  }
+  .centerDivHome{
+    width: 90%;
+    flex-direction: column;
+  }
+  .firstDiv img{
+    width: 250px;
+    height: 150px;
+    transition: all .5s;
+  }
+  .anim-1{
+    display: none;
+  }
+  .home p{
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+  .home a, .linkDiscord {
+    padding: 10px 45px;
+    font-size: 18px;
+  }
+  .home h1{
+    font-size: 30px;
+  }
+  .home h1 span{
+    font-size: 35px;
+  }
+  .anim-3 {
+    margin-left: 5vh;
+  }
+  .anim-2 {
+    --anim-order: 5;
+    margin-top: 15px;
+    margin-bottom: -75px;
+    margin-left: -20px;
+  }
+  .titleServicesDiv div hr{
+    height: 3px;
+  }
+  .titleServicesDiv h1{
+    font-size: 25px;
+    padding: 0 1.5vh;
+    white-space: nowrap;
+  }
+  .centerDivServices{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 85vh;
+    width: 95%;
+  }
+  .card{
+    margin: 2vh auto;
+    width: 350px;
+    height: 225px;
+  }
+  .card h2{
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .card p{
+    font-size: 14px;
+  }
+  .firstcard{
+    display: none;
+  }
+  .footerCard{
+    width: 85%;
+  }
+  .flexcards{
+    padding: 1vh 1vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contenerCreations{
+    width: 95%;
+  }
+  .textContentCreations{
+    max-width: 350px;
+    height: 100%;
+    margin: auto;
+    margin-top: 2vh;
+  }
+  .textContentCreations div h1{
+    padding-right: 1vh;
+    font-size: 30px;
+  }
+  .flexcardStyleContener{
+    width: 400px;
+    height: 275px;
+    margin: auto;
+    display: flex;
+  }
+  .flexcardStyle article img{
+    width: 300px;
+  }
+  .flexcards__dot{
+    margin-top: -50px !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .firstDiv img{
+    width: 250px;
+    height: 150px;
+    transition: all .5s;
+  }
+  .anim-1{
+    display: none;
+  }
+  .home p{
+    font-size: 16px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+  .home a, .linkDiscord {
+    padding: 10px 45px;
+    font-size: 16px;
+  }
+  .home h1{
+    font-size: 25px;
+  }
+  .home h1 span{
+    font-size: 30px;
+  }
+
+  .contenerCreations{
+    width: 97.5%;
+  }
+  .textContentCreations{
+    max-width: 90%;
+    min-width: 150px;
+    height: 100%;
+    margin: auto;
+    margin-top: 2vh;
+  }
+  .textContentCreations div h1{
+    padding-right: 1vh;
+    font-size: 30px;
+  }
+  .flexcardStyleContener{
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    display: flex;
+  }
+  .flexcardStyle article img{
+    width: 275px;
+  }
+  .flexcards__dot{
+    margin-top: -50px !important;
+  }
+  .card{
+    margin: 2vh auto;
+    width: 300px;
+    height: 210px;
+  }
+  .card h2{
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .card p{
+    font-size: 14px;
+  }
+}
